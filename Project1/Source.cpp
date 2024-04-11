@@ -32,6 +32,25 @@ void RemovePunctuationMarks(string str3, string& res) {
 	}
 }
 
+void PalindromeTest(string str4, string& res) {
+	bool flag = true;
+	int len = str4.length();
+
+	for (int i = 0; i < len / 2; i++)
+	{
+		if (str4[i] != str4[len - 1 - i])
+		{
+			flag = false;
+			break;
+		}
+	}
+
+	if (flag == 1)
+		res = "palindrome";
+	else
+		res = "not palindrome";
+}
+
 int main() {
 	int task;
 
@@ -95,7 +114,16 @@ int main() {
 		}
 		case 4:
 		{
-			
+			string result, string4;
+
+			cout << "Enter your string: ";
+
+			cin.get();
+			getline(cin, string4);
+
+			PalindromeTest(string4, result);
+
+			cout << "String " << "'" << string4 << "'" << " is " << result << endl;
 
 			break;
 		}

@@ -1,0 +1,2 @@
+C:\Users\Nikita\Desktop\labgit\labgit1\Project1\Debug\Project1.exe
+C:\Users\Nikita\Desktop\labgit\labgit1\Project1\Debug\Project1.pdb
