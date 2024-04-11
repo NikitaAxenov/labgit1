@@ -14,7 +14,14 @@ void NumberOfVowels(string str1, int& res) {
 	}
 }
 
-
+void ChangeCaseOfLetters(string& str2) {
+	for (int i = 0; i < str2.length(); i++) {
+		if (str2[i] >= 65 && str2[i] <= 92)
+			str2[i] += 32;
+		else if (str2[i] >= 97 && str2[i] <= 122)
+			str2[i] -= 32;
+	}
+}
 
 int main() {
 	int task;
@@ -49,7 +56,16 @@ int main() {
 		}
 		case 2:
 		{
-			
+			string string2;
+
+			cout << "Enter your string: ";
+
+			cin.get();
+			getline(cin, string2);
+
+			ChangeCaseOfLetters(string2);
+
+			cout << string2 << endl;
 
 			break;
 		}
