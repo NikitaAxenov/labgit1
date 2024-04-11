@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <cctype>
 
 using namespace std;
 
@@ -20,6 +22,13 @@ void ChangeCaseOfLetters(string& str2) {
 			str2[i] += 32;
 		else if (str2[i] >= 97 && str2[i] <= 122)
 			str2[i] -= 32;
+	}
+}
+
+void RemovePunctuationMarks(string str3, string& res) {
+	for (char c : str3) {
+		if (isalnum(c) || isspace(c))
+			res += c;
 	}
 }
 
@@ -71,7 +80,16 @@ int main() {
 		}
 		case 3:
 		{
-			
+			string result, string3;
+
+			cout << "Enter your string: ";
+
+			cin.get();
+			getline(cin, string3);
+
+			RemovePunctuationMarks(string3, result);
+
+			cout << result << endl;
 
 			break;
 		}
