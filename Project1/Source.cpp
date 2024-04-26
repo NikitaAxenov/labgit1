@@ -33,6 +33,7 @@ void RemovePunctuationMarks(string str3, string& res) {
 }
 
 void PalindromeTest(string str4, string& res) {
+	// Функция палиндром
 	bool flag = true;
 	int len = str4.length();
 	string newstr4;
